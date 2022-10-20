@@ -18,6 +18,8 @@ const CONFIG_ARCHIVE = {
   origin: true,              // 是否打包源码，可设置为 false 或一个字符串，当值为字符串时，作为源码压缩包的密码
   format: 'MMddhhmm',        // 时间后缀格式，可替换内容包含：yyyy MM dd hh mm ss
   password: '',              // 构建结果压缩包密码，为空则不设置
+  origin_pre: 'origin',      // 源码打包结果前缀
+  result_pre: 'result',      // 构建结果打包前缀
   ignore_folder: [],         // 源码打包时忽略的目录，固定忽略 node_modules 与构建结果目录
   ignore_file: ['*.zip']     // 源码打包时忽略的文件
 }

@@ -31,12 +31,12 @@ module.exports = function(option = {}) {
   option = Object.assign({ name, dist: 'dist', open: true, origin: true, format: 'MMddhhmm', ignore_file: ['*.zip'], ignore_folder: [] }, option)
 
   async function closeBundle() {
-    const archiver_result = CreateArchiver('result', option, option.password)
+    const archiver_result = CreateArchiver(option.result_pre || 'result', option, option.password)
     archiver_result.directory(option.dist, false)
     archiver_result.finalize()
 
     if (option.origin) {
-      const archiver_origin = CreateArchiver('origin', option, option.origin)
+      const archiver_origin = CreateArchiver(option.origin_pre || 'origin', option, option.origin)
 
       archiver_origin.glob('*', {
         matchBase: true,

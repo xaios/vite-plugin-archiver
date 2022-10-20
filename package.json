@@ -2,7 +2,7 @@
   "name": "@xaios/vite-plugin-archiver",
   "author": "aizhifeng",
   "description": "Vite3 项目构建后自动打包",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "keywords": [
     "vite-plugin"
