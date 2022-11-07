@@ -41,7 +41,7 @@ module.exports = function(option = {}) {
       archiver_origin.glob('*', {
         matchBase: true,
         ignore: option.ignore_file,
-        skip: ['node_modules', option.dist].concat(option.ignore_folder)
+        skip: ['.git', 'node_modules', option.dist].concat(option.ignore_folder)
       })
       archiver_origin.finalize()
     }
